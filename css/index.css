@@ -1,0 +1,26 @@
+body {
+    background-color:#5577FF;   
+    color:white;
+}
+a{
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+}
+#textregion {
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    font-size:250%;
+}
+#world {
+    margin-top:0px;
+    margin-right:auto;
+    margin-left:auto;
+}
+#vmap{
+    width: 600px;
+    height:400px;
+    margin-right:auto;
+    margin-left:auto;
+}
