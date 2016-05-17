@@ -6,6 +6,14 @@ jQuery(document).ready(function () {
         h = ($(document).height())* .90
         $("#vmap").width(w);
         $("#vmap").height(h);
+        /*for( i = 0; i < mapsequence.length; i++) {
+            code = mapsequence[i].code;
+            if(regions[code.toUpperCase()]) {
+                
+            } else {
+                console.log(code);
+            }
+        }*/
         var pop = mapsequence.pop().code;
         
         //console.log(pop)
@@ -27,11 +35,11 @@ jQuery(document).ready(function () {
           onRegionOver: function(event, code, region) {
           },
           onRegionClick: function(event, code, region) {
-              console.log(code);
+              //console.log(code);
               if(code == pop) {
                   $("#textregion").css('color','green');
                   pop = mapsequence.pop().code;
-                  console.log(pop);
+                  //console.log(pop);
                   setTimeout(function(){},1000);
                   $("#textregion").text(findRegion(pop));
                   $("#textregion").css('color','white');
@@ -53,12 +61,10 @@ jQuery(document).ready(function () {
           }
         });
         function findRegion(code) {
+            //console.log(code + code.toUpperCase() + regions[code.toUpperCase()]);
             //console.log(regions.length);
-            for(i = 0; i < regions.length; i++) {
-                //console.log(regions[i].Code);
-                if(regions[i].Code.toLowerCase() == code){
-                    return regions[i].Country;
-                }
+            if(regions[code.toUpperCase()]) {
+                return regions[code.toUpperCase()];
             }
             return "What?";
         }
