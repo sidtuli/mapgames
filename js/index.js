@@ -37,14 +37,12 @@ jQuery(document).ready(function () {
           onRegionClick: function(event, code, region) {
               //console.log(code);
               if(code == pop) {
-                  $("#textregion").css('color','green');
                   pop = mapsequence.pop().code;
                   //console.log(pop);
-                  setTimeout(function(){},1000);
                   $("#textregion").text(findRegion(pop));
-                  $("#textregion").css('color','white');
+                  $("#textregion").css('background-color','green');
               } else {
-                  $("#textregion").css('color','red');
+                  $("#textregion").css('background-color','red');
               }
           },
           onRegionDeselect: function(event, code, region) {   
