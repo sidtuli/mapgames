@@ -72,9 +72,12 @@ jQuery(document).ready(function () {
               console.log(code+" "+region);
               //console.log(code);
               if(code === pop) {
-                  pop = mapsequence.pop().code;
-                  //console.log(pop);
-                  $("#textregion").text(findRegion(pop));
+                  if(mapsequence.length > 0){
+                    pop = mapsequence.pop().code;
+                    $("#textregion").text(findRegion(pop));
+                  } else {
+                    $("#textregion").text("Done!");
+                  }
                   $("#textregion").css('background-color','green');
               } else {
                   $("#textregion").css('background-color','red');

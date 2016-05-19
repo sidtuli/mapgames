@@ -226,7 +226,12 @@ jQuery(document).ready(function () {
           },
           onRegionClick: function(event, code, region) {
               if(code == pop) {
-                  $("#textregion").text(findRegion(pop));
+                  if(mapsequence.length > 0){
+                    pop = mapsequence.pop().code;
+                    $("#textregion").text(findRegion(pop));
+                  } else {
+                    $("#textregion").text("Done!");
+                  }
                   $("#textregion").css('background-color','green');
               } else {
                   $("#textregion").css('background-color','red');
