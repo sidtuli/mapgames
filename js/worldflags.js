@@ -60,7 +60,7 @@ regions = {
 "gb":"United Kingdom",
 "gd":"Grenada",
 "ge":"Georgia",
-"gf":"French Guiana",
+//"gf":"French Guiana",
 "gh":"Ghana",
 "gl":"Greenland",
 "gm":"Gambia",
