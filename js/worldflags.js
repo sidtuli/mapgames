@@ -119,7 +119,7 @@ regions = {
 "my":"Malaysia",
 "mz":"Mozambique",
 "na":"Namibia",
-"nc":"New Caledonia",
+//"nc":"New Caledonia",
 "ne":"Niger",
 "ng":"Nigeria",
 "ni":"Nicaragua",
