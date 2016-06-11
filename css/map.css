@@ -1,0 +1,11 @@
+body {
+    background-color:#5577FF;   
+    color:white;
+    text-align:center;
+}
+#vmap{
+    margin:auto;
+}
+#textregion{
+    font-size: 5.0vh;
+}
