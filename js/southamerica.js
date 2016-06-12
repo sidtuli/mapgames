@@ -35,7 +35,7 @@ jQuery(document).ready(function () {
         var done = false;
         var clicks = 0;
         var corrects = 0;
-        var myVar = setInterval(myTimer, 1);
+        var myVar = setInterval(myTimer, 10);
         // Initially grab the width and length of the browser window
         // Then change the numbers to not fill the window and then change its dimensions
         w = ($(document).width())* .90
@@ -100,13 +100,13 @@ jQuery(document).ready(function () {
             console.log(code);
             return "What?";
         }
-        var milliseconds = 0;
+        var centiseconds = 0;
         var seconds = 0;
         var minutes = 0;
         function myTimer(){
-            milliseconds += 1;
-            if(milliseconds > 999){
-                milliseconds = 0;
+            centiseconds += 1;
+            if(centiseconds > 99){
+                centiseconds = 0;
                 seconds += 1;
             }
             if(seconds > 59){
@@ -115,9 +115,8 @@ jQuery(document).ready(function () {
             }
             var m = minutes > 9 ? minutes.toString() : "0"+minutes;
             var s = seconds > 9 ? seconds.toString() : "0"+seconds;
-            var mi = milliseconds > 9 ? milliseconds.toString() : "0"+milliseconds;
-            mi = milliseconds > 99 ? milliseconds.toString() : "0"+mi;
-            document.getElementById("time").innerHTML = m+":"+s+":"+mi;
+            var c = centiseconds > 9 ? centiseconds.toString() : "0"+centiseconds;
+            document.getElementById("time").innerHTML = m+":"+s+":"+c;
         }
     
 });
