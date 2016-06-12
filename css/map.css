@@ -8,4 +8,20 @@ body {
 }
 #textregion{
     font-size: 5.0vh;
+    width:50%;
+    text-align:center;
+    display:inline-block;
+    
+}
+#time{
+    text-align:left;
+    font-size: 5.0vh;
+    display:inline-block;
+    width: 20%;
+}
+#attempts{
+    text-align:right;
+    font-size: 5.0vh;
+    display:inline-block;
+    width: 20%;
 }
