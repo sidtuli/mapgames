@@ -53,6 +53,10 @@ jQuery(document).ready(function () {
           onRegionOver: function(event, code, region) {
           },
           onRegionClick: function(event, code, region) {
+              /*if(!(code in regions)) {
+                  console.log(code +" "+region);
+              }*/
+            
             if(!done) {
                 clicks += 1;
                 if(code === pop) {
