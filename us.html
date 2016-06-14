@@ -11,14 +11,75 @@
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="dist/jquery.vmap.js"></script>
     <script type="text/javascript" src="dist/maps/jquery.vmap.usa.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/us.js"></script>
+    <script>
+        regions = {
+            "wa":"Washington",
+            "or":"Oregon",
+            "ca":"California",
+            "ak":"Alaska",
+            "id":"Idaho",
+            "mt":"Montana",
+            "nv":"Nevada",
+            "wy":"Wyoming",
+            "co":"Colorado",
+            "nm":"New Mexico",
+            "az":"Arizona",
+            "ut":"Utah",
+            "tx":"Texas",
+            "ok":"Oklahoma",
+            "ks":"Kansas",
+            "ne":"Nebraska",
+            "sd":"South Dakota",
+            "nd":"North Dakota",
+            "wi":"Wisconsin",
+            "mn":"Minnesota",
+            "ia":"Iowa",
+            "mo":"Missouri",
+            "ar":"Arkansas",
+            "la":"Louisiana",
+            "mi":"Michigan",
+            "il":"Illinois",
+            "tn":"Tenessee",
+            "ms":"Mississippi",
+            "al":"Alabama",
+            "ga":"Georgia",
+            "ky":"Kentucky",
+            "in":"Indiana",
+            "oh":"Ohio",
+            "fl":"Florida",
+            "sc":"South Carolina",
+            "nc":"North Carolina",
+            "va":"Virginia",
+            "wv":"West Virginia",
+            "dc":"District of Columbia",
+            "md":"Maryland",
+            "de":"Delaware",
+            "pa":"Pennsylvania",
+            "nj":"New Jersey",
+            "ny":"New York",
+            "ct":"Connecticut",
+            "ri":"Rhode Island",
+            "ma":"Massachusetts",
+            "vt":"Vermont",
+            "nh":"New Hampshire",
+            "me":"Maine",
+            "hi":"Hawaii"
+        }
+        mapType = 'usa_en'
+    </script>
+    <script type="text/javascript" src="js/map.js"></script>
   </head>
   <body>
     <div id="world">
         <div id="vmap"></div>
     </div>
-    <div id="textregion">
-        
+    <div id="info">
+        <div id="time">
+        </div>
+        <div id="textregion">
+        </div>
+        <div id="attempts">
+        </div>
     </div>
     
     

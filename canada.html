@@ -11,15 +11,39 @@
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="dist/jquery.vmap.js"></script>
     <script type="text/javascript" src="dist/maps/jquery.vmap.canada.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/canada.js"></script>
+    <script>
+        regions = {
+            "yt":"Yukon",
+            "nt":"Northwest Territories",
+            "nu":"Nunavut",
+            "bc":"British Colombia",
+            "ab":"Alberta",
+            "sk":"Saskatchewan",
+            "mb":"Manitoba",
+            "on":"Ontario",
+            "qc":"Québec",
+            "nb":"New Brunswick",
+            "ns":"Nova Scotia",
+            "nl":"Newfoundland and Labrador",
+            "pe":"Prince Edward Island"
+        }
+        mapType = 'canada_en'
+    </script>
+    <script type="text/javascript" src="js/map.js"></script>
   </head>
   <body>
     <div id="world">
         <div id="vmap"></div>
     </div>
-    <div id="textregion">
-        
+    <div id="info">
+        <div id="time">
+        </div>
+        <div id="textregion">
+        </div>
+        <div id="attempts">
+        </div>
     </div>
+    
     
     
   </body>

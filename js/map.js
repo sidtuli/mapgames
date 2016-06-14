@@ -1,19 +1,3 @@
-var regions = {
-    "ve":"Venezuela",
-    "co":"Colombia",
-    "br":"Brazil",
-    "gy":"Guyana",
-    "sr":"Suriname",
-    "gf":"French Guiana",
-    "ec":"Ecuador",
-    "cl":"Chile",
-    "ar":"Argentina",
-    "fk":"Falkland Islands",
-    "uy":"Uruguay",
-    "py":"Paraguay",
-    "bo":"Bolivia",
-    "pe":"Peru"
-}
 var mapsequence = [];
 // Randomize ranks for all regions and then sort them to present
 for (var key in regions) {
@@ -42,12 +26,20 @@ jQuery(document).ready(function () {
         h = ($(document).height())* .90
         $("#vmap").width(w);
         $("#vmap").height(h);
+        for( i = 0; i < mapsequence.length; i++) {
+            code = mapsequence[i].code;
+            if(regions[code]) {
+                
+            } else {
+                console.log(code);
+            }
+        }
         var pop = mapsequence.pop().code;
-        
+    
         $("#textregion").text(findRegion(pop));
         // Here is all the code that deals with the vector map functionality 
         jQuery('#vmap').vectorMap({
-          map: 'south-america_en',
+          map: mapType,
           backgroundColor: '#5577FF',
           borderColor: '#000000',
           borderWidth: 1,
@@ -56,13 +48,14 @@ jQuery(document).ready(function () {
           selectedColor: '#000000',
           enableZoom: true,
           showTooltip: true,
+          scaleColors: ['#FF0000', '#FFFF00'],
           normalizeFunction: 'polynomial',
           onRegionOver: function(event, code, region) {
           },
           onRegionClick: function(event, code, region) {
-              if(!done){
+            if(!done) {
                 clicks += 1;
-                if(code == pop) {
+                if(code === pop) {
                     corrects += 1;
                     if(mapsequence.length > 0){
                         pop = mapsequence.pop().code;
@@ -72,13 +65,12 @@ jQuery(document).ready(function () {
                         clearInterval(myVar);
                         done = true;
                     }
-                    $("#info").css('background-color','green');
+                        $("#info").css('background-color','green');
                 } else {
-                    //console.log(code + " "+region)
                     $("#info").css('background-color','red');
                 }
-                $("#attempts").text(corrects +"/"+clicks);
-              }
+                $("#attempts").text(corrects+"/"+clicks);
+            }
           },
           onRegionDeselect: function(event, code, region) {   
           },
@@ -94,6 +86,8 @@ jQuery(document).ready(function () {
           }
         });
         function findRegion(code) {
+            //console.log(code + code.toUpperCase() + regions[code.toUpperCase()]);
+            //console.log(regions.length);
             if(regions[code]) {
                 return regions[code];
             }
@@ -103,20 +97,19 @@ jQuery(document).ready(function () {
         var centiseconds = 0;
         var seconds = 0;
         var minutes = 0;
-        function myTimer(){
+        function myTimer() {
             centiseconds += 1;
-            if(centiseconds > 99){
+            if(centiseconds > 99) {
                 centiseconds = 0;
                 seconds += 1;
             }
-            if(seconds > 59){
+            if (seconds > 59) {
                 seconds = 0;
                 minutes += 1;
             }
-            var m = minutes > 9 ? minutes.toString() : "0"+minutes;
-            var s = seconds > 9 ? seconds.toString() : "0"+seconds;
-            var c = centiseconds > 9 ? centiseconds.toString() : "0"+centiseconds;
+            var m = minutes > 9 ? minutes.toString() : "0"+minutes.toString();
+            var s = seconds > 9 ? seconds.toString() : "0"+seconds.toString();
+            var c = centiseconds > 9 ? centiseconds.toString() : centiseconds.toString();
             document.getElementById("time").innerHTML = m+":"+s+":"+c;
         }
-    
-});
+    });
