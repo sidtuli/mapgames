@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Europe (And Surrounding Area)</title>
+        <link href="dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="css/map.css" rel="stylesheet" type="text/css"/>
+        
+        <script type = "text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="dist/jquery.vmap.js"></script>
+        <script type="text/javascript" src="dist/maps/jquery.vmap.europe.js"></script>
+        <script>
+            regions = {
+                "gl":"Greenland",
+                "is":"Iceland",
+                "pt":"Portugal",
+                "ma":"Morocco",
+                "es":"Spain",
+                "tn":"Tunisia",
+                "dz":"Algeria",
+                "be":"Belgium",
+                "it":"Italy",
+                "by":"Belarus",
+                "pl":"Poland",
+                "jo":"Jordan",
+                "gr":"Greece",
+                "tm":"Turkmenistan",
+                "kz":"Kazakhstan",
+                "fi":"Finland",
+                "de":"Germany",
+                "se":"Sweden",
+                "no":"Norway",
+                "ua":"Ukraine",
+                "il":"Israel",
+                "sa":"Saudi Arabia",
+                "iq":"Iraq",
+                "az":"Azerbaijan",
+                "ir":"Iran",
+                "ge":"Georgia",
+                "sy":"Syrian Arab Republic",
+                "tr":"Turkey",
+                "am":"Armenia",
+                "cy":"Cyprus",
+                "ie":"Ireland",
+                "gb":"United Kingdom",
+                "ch":"Switzerland",
+                "at":"Austria",
+                "cz":"Czech Republic",
+                "sk":"Slovakia",
+                "hu":"Hungary",
+                "lt":"Lithuania",
+                "lv":"Latvia",
+                "md":"Moldova",
+                "ro":"Romania",
+                "bg":"Bulgaria",
+                "al":"Albania",
+                "ee":"Estonia",
+                "lb":"Lebanon",
+                "ad":"Andorra",
+                "sm":"San Marino",
+                "mc":"Monaco",
+                "lu":"Luxembourg",
+                "fr":"France",
+                "li":"Liechtenstein",
+                "nl":"Netherlands",
+                "ba":"Bosnia and Herzegovina",
+                "si":"Slovenia",
+                "mk":"Macedonia",
+                "hr":"Croatia",
+                "dk":"Denmark",
+                "ru":"Russian Federation",
+                "mt":"Malta",
+                "me":"Montenegro",
+                "rs":"Serbia"
+            }
+            
+            mapType = "europe_en";
+        </script>
+        <script type="text/javascript" src="js/map.js"></script>
+    </head>
+    <body>
+        <div id="world">
+            <div id="vmap">
+            </div>
+        </div>
+                 
+        <div id="info">
+            <div id="time">
+            </div>
+            <div id="textregion">
+            </div>
+            <div id="attempts">
+            </div>
+        </div>
+    </body>
+</html>
