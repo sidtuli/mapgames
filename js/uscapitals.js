@@ -96,7 +96,7 @@ capitals ={
     "South Dakota":"Pierre",
     "Tennessee":"Nashville",
     "Texas":"Austin",
-    "Utah":"Salt Lake",
+    "Utah":"Salt Lake City",
     "Vermont":"Montpelier",
     "Virginia":"Richmond",
     "Washington":"Washington",
