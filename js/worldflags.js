@@ -207,7 +207,7 @@ jQuery(document).ready(function () {
         resizeImage();
         resizeMap();
         var pop = mapsequence.pop().code;
-        $("#flag").attr("src","http://www.geonames.org/flags/x/" + pop + ".gif");
+        $("#flag").attr("src","js/imgs/world/" + pop + ".svg");
         //$("#textregion").text(findRegion(pop));
         // Here is all the code that deals with the vector map functionality 
         jQuery('#vmap').vectorMap({
@@ -228,7 +228,7 @@ jQuery(document).ready(function () {
               if(code == pop) {
                   if(mapsequence.length > 0){
                     pop = mapsequence.pop().code;
-                    $("#flag").attr("src","http://www.geonames.org/flags/x/" + pop + ".gif");
+                    $("#flag").attr("src","js/imgs/world/" + pop + ".svg");
                     $("#textregion").css('background-color','#5577FF');
                     resizeImage();
                   } else {
