@@ -200,7 +200,10 @@ var codeSort = function(a,b) {
 };
 mapsequence.sort(codeSort);
 jQuery(document).ready(function () {
-    
+        var done = false;
+        var clicks = 0;
+        var corrects = 0;
+        var myVar = setInterval(myTimer, 10);
         // Initially grab the width and length of the browser window
         // Then change the numbers to not fill the window and then change its dimensions
         
@@ -225,19 +228,27 @@ jQuery(document).ready(function () {
           },
           onRegionClick: function(event, code, region) {
               console.log(findRegion(pop)+" "+pop);
-              if(code == pop) {
-                  if(mapsequence.length > 0){
-                    pop = mapsequence.pop().code;
-                    $("#flag").attr("src","js/imgs/world/" + pop + ".svg");
-                    $("#textregion").css('background-color','#5577FF');
-                    resizeImage();
-                  } else {
-                      $("#flag").css("display","none");
-                    $("#textregion").text("Done!");
-                  }
-              } else {
-                  $("#textregion").css('background-color','red');
-              }
+                if(!done){
+                    clicks+=1;
+                    if(code == pop) {
+                        corrects += 1;
+                        if(mapsequence.length > 0){
+                            console.log(corrects+"/"+clicks);
+                            pop = mapsequence.pop().code;
+                            $("#flag").attr("src","js/imgs/world/" + pop + ".svg");
+                            $("#textregion").css('background-color','#5577FF');
+                            resizeImage();
+                        } else {
+                            $("#flag").css("display","none");
+                            $("#textregion").text("Done!");
+                            done = true;
+                        } 
+                    } else {
+                        $("#textregion").css('background-color','red');
+                    }
+              
+              } 
+              $("#attempts").text(corrects+"/"+clicks);
           },
           onRegionDeselect: function(event, code, region) {   
           },
@@ -258,8 +269,6 @@ jQuery(document).ready(function () {
         function resizeImage() {
             $("#flag").css("height","100%");
             $("#flag").css("width","auto");
-            
-            
         }
         function findRegion(code) {
             if(regions[code]) {
@@ -276,5 +285,23 @@ jQuery(document).ready(function () {
             $("#vmap").width(w);
             $("#vmap").height(h);
             $("#textregion").height($(window).height()* .10)
+        }
+        var centiseconds = 0;
+        var seconds = 0;
+        var minutes = 0;
+        function myTimer() {
+            centiseconds += 1;
+            if(centiseconds > 99) {
+                centiseconds = 0;
+                seconds += 1;
+            }
+            if (seconds > 59) {
+                seconds = 0;
+                minutes += 1;
+            }
+            var m = minutes > 9 ? minutes.toString() : "0"+minutes.toString();
+            var s = seconds > 9 ? seconds.toString() : "0"+seconds.toString();
+            var c = centiseconds > 9 ? centiseconds.toString() : "0"+centiseconds.toString();
+            document.getElementById("time").innerHTML = m+":"+s+":"+c;
         }
     });

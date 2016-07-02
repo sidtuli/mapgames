@@ -12,9 +12,23 @@ body {
 #textregion{
     margin-right: auto;
     margin-left:auto;
+    height: 10%;
+    text-align:center;
 }
 #flag {
     margin-right:auto;
     margin-left:auto;
-    display:block;
+    display:inline-block;
+    float:inherit;
+    background-color:#5577FF; 
+}
+#attempts{
+    font-size:5.0vmin;
+    display:inline-block;
+    float:right;
+}
+#time{
+    font-size:5.0vmin;
+    display:inline-block;
+    float:left;
 }

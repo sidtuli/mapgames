@@ -48,7 +48,6 @@ jQuery(document).ready(function () {
           selectedColor: '#000000',
           enableZoom: true,
           showTooltip: true,
-          scaleColors: ['#FF0000', '#FFFF00'],
           normalizeFunction: 'polynomial',
           onRegionOver: function(event, code, region) {
           },
