@@ -76,6 +76,7 @@ jQuery(document).ready(function () {
                             clearInterval(myVar);
                             done = true;
                             $("#textregion").css('background-color','green');
+                            $('#flag').css('background-color','green');
                         } 
                     } else {
                         $("#textregion").css('background-color','red');
