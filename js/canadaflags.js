@@ -1,56 +1,18 @@
 regions = {
-            "wa":"Washington",
-            "or":"Oregon",
-            "ca":"California",
-            "ak":"Alaska",
-            "id":"Idaho",
-            "mt":"Montana",
-            "nv":"Nevada",
-            "wy":"Wyoming",
-            "co":"Colorado",
-            "nm":"New Mexico",
-            "az":"Arizona",
-            "ut":"Utah",
-            "tx":"Texas",
-            "ok":"Oklahoma",
-            "ks":"Kansas",
-            "ne":"Nebraska",
-            "sd":"South Dakota",
-            "nd":"North Dakota",
-            "wi":"Wisconsin",
-            "mn":"Minnesota",
-            "ia":"Iowa",
-            "mo":"Missouri",
-            "ar":"Arkansas",
-            "la":"Louisiana",
-            "mi":"Michigan",
-            "il":"Illinois",
-            "tn":"Tennessee",
-            "ms":"Mississippi",
-            "al":"Alabama",
-            "ga":"Georgia",
-            "ky":"Kentucky",
-            "in":"Indiana",
-            "oh":"Ohio",
-            "fl":"Florida",
-            "sc":"South Carolina",
-            "nc":"North Carolina",
-            "va":"Virginia",
-            "wv":"West Virginia",
-            "dc":"District of Columbia",
-            "md":"Maryland",
-            "de":"Delaware",
-            "pa":"Pennsylvania",
-            "nj":"New Jersey",
-            "ny":"New York",
-            "ct":"Connecticut",
-            "ri":"Rhode Island",
-            "ma":"Massachusetts",
-            "vt":"Vermont",
-            "nh":"New Hampshire",
-            "me":"Maine",
-            "hi":"Hawaii"
-        }
+            "yt":"Yukon",
+            "nt":"Northwest Territories",
+            "nu":"Nunavut",
+            "bc":"British Colombia",
+            "ab":"Alberta",
+            "sk":"Saskatchewan",
+            "mb":"Manitoba",
+            "on":"Ontario",
+            "qc":"Québec",
+            "nb":"New Brunswick",
+            "ns":"Nova Scotia",
+            "nl":"Newfoundland and Labrador",
+            "pe":"Prince Edward Island"
+}
 var mapsequence = [];
 // Randomize ranks for all regions and then sort them to present
 for (var key in regions) {
@@ -79,11 +41,11 @@ jQuery(document).ready(function () {
         resizeImage();
         resizeMap();
         var pop = mapsequence.pop().code;
-        $("#flag").attr("src","js/imgs/us/" + pop + ".svg");
+        $("#flag").attr("src","js/imgs/ca/" + pop + ".svg");
         //$("#textregion").text(findRegion(pop));
         // Here is all the code that deals with the vector map functionality 
         jQuery('#vmap').vectorMap({
-          map: 'usa_en',
+          map: 'canada_en',
           backgroundColor: '#5577FF',
           borderColor: '#000000',
           borderWidth: 1,
@@ -96,28 +58,31 @@ jQuery(document).ready(function () {
           onRegionOver: function(event, code, region) {
           },
           onRegionClick: function(event, code, region) {
-            console.log(findRegion(pop)+" "+pop);
-            if(!done){
-                  clicks+=1;
-                  if(code == pop) {
-                    corrects += 1;
-                    if(mapsequence.length > 0){
-                        pop = mapsequence.pop().code;
-                        $("#flag").attr("src","js/imgs/us/" + pop + ".svg");
-                        $("#textregion").css('background-color','#5577FF');
-                        resizeImage();
-                    } else {                        
+              console.log(findRegion(pop)+" "+pop);
+                if(!done){
+                    clicks+=1;
+                    if(code == pop) {
+                        corrects += 1;
+                        if(mapsequence.length > 0){
+                            console.log(corrects+"/"+clicks);
+                            pop = mapsequence.pop().code;
+                            $("#flag").attr("src","js/imgs/ca/" + pop + ".svg");
+                            $("#textregion").css('background-color','#5577FF');
+                            resizeImage();
+                        } else {
+                            //$("#flag").css("display","none");
                             $("#flag").attr("src","js/imgs/thumbs.svg");
                             $('#flag').prop('title', 'Done!');
                             clearInterval(myVar);
                             done = true;
                             $("#textregion").css('background-color','green');
+                        } 
+                    } else {
+                        $("#textregion").css('background-color','red');
                     }
-                } else {
-                    $("#textregion").css('background-color','red');
-                }
-            }
-            $("#attempts").text(corrects+"/"+clicks);
+              
+              } 
+              $("#attempts").text(corrects+"/"+clicks);
           },
           onRegionDeselect: function(event, code, region) {   
           },

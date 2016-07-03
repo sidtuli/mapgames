@@ -239,9 +239,11 @@ jQuery(document).ready(function () {
                             $("#textregion").css('background-color','#5577FF');
                             resizeImage();
                         } else {
-                            $("#flag").css("display","none");
-                            $("#textregion").text("Done!");
+                            $("#flag").attr("src","js/imgs/thumbs.svg");
+                            $('#flag').prop('title', 'Done!');
+                            clearInterval(myVar);
                             done = true;
+                            $("#textregion").css('background-color','green');
                         } 
                     } else {
                         $("#textregion").css('background-color','red');

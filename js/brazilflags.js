@@ -87,7 +87,11 @@ jQuery(document).ready(function () {
                         $("#textregion").text("Done!");
                     }
                 } else {
-                    $("#textregion").css('background-color','red');
+                    $("#flag").attr("src","js/imgs/thumbs.svg");
+                    $('#flag').prop('title', 'Done!');
+                    clearInterval(myVar);
+                    done = true;
+                    $("#textregion").css('background-color','green');
                 }
             }
             $("#attempts").text(corrects+"/"+clicks);
