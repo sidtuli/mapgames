@@ -1,21 +1,3 @@
-regions = {
-                "he":"Hessen",
-                "by":"Bayern",
-                "bw":"Baden-Württemberg",
-                "sl":"Saarland",
-                "nw":"Nordrhein-Westfalen",
-                "ni":"Niedersachsen",
-                "sh":"Schleswig-Holstein",
-                "hh":"Hamburg",
-                "mv":"Mecklenburg-Vorpommern",
-                "bb":"Brandenburg",
-                "be":"Berlin",
-                "sn":"Sachsen",
-                "st":"Sachsen-Anhalt",
-                "th":"Thüringen",
-                "hb":"Bremen",
-                "rp":"Rheinland-Pfalz"
-            }
 var mapsequence = [];
 // Randomize ranks for all regions and then sort them to present
 for (var key in regions) {
@@ -44,11 +26,11 @@ jQuery(document).ready(function () {
         resizeImage();
         resizeMap();
         var pop = mapsequence.pop().code;
-        $("#flag").attr("src","js/imgs/de/" + pop + ".svg");
+        $("#flag").attr("src",prefix + pop + ".svg");
         //$("#textregion").text(findRegion(pop));
         // Here is all the code that deals with the vector map functionality 
         jQuery('#vmap').vectorMap({
-          map: 'germany_en',
+          map: mapType,
           backgroundColor: '#5577FF',
           borderColor: '#000000',
           borderWidth: 1,
@@ -69,7 +51,7 @@ jQuery(document).ready(function () {
                         if(mapsequence.length > 0){
                             console.log(corrects+"/"+clicks);
                             pop = mapsequence.pop().code;
-                            $("#flag").attr("src","js/imgs/de/" + pop + ".svg");
+                            $("#flag").attr("src",prefix + pop + ".svg");
                             $("#textregion").css('background-color','#5577FF');
                             resizeImage();
                         } else {
