@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Australia</title>
+        <link href="dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="css/map.css" rel="stylesheet" type="text/css"/>
+        
+        <script type = "text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="dist/jquery.vmap.js"></script>
+        <script type="text/javascript" src="dist/maps/continents/jquery.vmap.australia.js"></script>
+        <script>
+            regions = {
+                "au":"Canberra",
+                "fj":"Suva",
+                "nc":"Noumea",
+                "nz":"Wellington",
+                "pg":"Port Moresby",
+                "sb":"Honiara",
+                "vu":"Port Vila"
+            }
+            
+            mapType = "australia_en";
+        </script>
+        <script type="text/javascript" src="js/map.js"></script>
+    </head>
+    <body>
+        <div id="world">
+            <div id="vmap">
+            </div>
+        </div>
+                 
+        <div id="info">
+            <div id="time">
+            </div>
+            <div id="textregion">
+            </div>
+            <div id="attempts">
+            </div>
+        </div>
+    </body>
+</html>
