@@ -35,7 +35,7 @@
   </clipPath>
  </defs>
  <g id="flag">
-  <rect id="rect8734" height="480" width="640" y="0" x="0" fill="#fff"/>
+  <rect id="rect8734" height="480" width="640" y="0" x="0" fill="transparent"/>
   <g id="g8553" clip-path="url(#clipPath8578)" transform="matrix(.9375 0 0 .9375 0 14.96)">
    <g id="g8531" fill-rule="evenodd" transform="matrix(1.0432 0 0 1.0432 -.0024051 -21.45)">
     <path id="path552" d="m6.2712 489.83 363.1-0.01-237.66-241.01 246.61 0.29-372.03-237.62-0.0188 478.35z" stroke="#000063" stroke-width="13.26" fill="#ce0000"/>

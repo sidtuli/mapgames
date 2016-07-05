@@ -37,6 +37,8 @@ jQuery(document).ready(function () {
         var pop = mapsequence.pop().code;
     
         $("#textregion").text(findRegion(pop));
+        //$("#favicon").attr("href","js/imgs/favs/"+pop+".png")
+        //$("#favicon").attr("href","js/imgs/globe.png")
         // Here is all the code that deals with the vector map functionality 
         jQuery('#vmap').vectorMap({
           map: mapType,

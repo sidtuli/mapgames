@@ -27,6 +27,7 @@ jQuery(document).ready(function () {
         resizeMap();
         var pop = mapsequence.pop().code;
         $("#flag").attr("src",prefix + pop + ".svg");
+        $("#favicon").attr("href","js/imgs/favs/"+pop+".png")
         //$("#textregion").text(findRegion(pop));
         // Here is all the code that deals with the vector map functionality 
         jQuery('#vmap').vectorMap({
