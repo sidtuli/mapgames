@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Australia - Flags</title>
+        <link href="dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="css/flags.css" rel="stylesheet" type="text/css"/>
+        
+        <script type = "text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="dist/jquery.vmap.js"></script>
+        <script type="text/javascript" src="dist/maps/continents/jquery.vmap.australia.js"></script>
+        <script>
+            regions = {
+                "pg":"Papua New Guinea",
+                "au":"Australia",
+                "nz":"New Zealand",
+                "nc":"New Caledonia",
+                "sb":"Solomon Islands",
+                "vu":"Vanuatu",
+                "fj":"Fiji"
+            }
+            prefix = "js/imgs/world/"
+            mapType = "australia_en";
+        </script>
+        <script type="text/javascript" src="js/flags.js"></script>
+    </head>
+    <body>
+        <div id="world">
+            <div id="vmap">
+            </div>
+        </div>
+                 
+        <div id="textregion">
+            <span id="time"></span>
+            <img id="flag" src="">
+            <span id="attempts"></span>
+        </div>
+    </body>
+</html>

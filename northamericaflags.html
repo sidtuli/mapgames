@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>North America - Flags</title>
+        <link href="dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="css/flags.css" rel="stylesheet" type="text/css"/>
+        
+        <script type = "text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="dist/jquery.vmap.js"></script>
+        <script type="text/javascript" src="dist/maps/continents/jquery.vmap.north-america.js"></script>
+        <script>
+            regions = {
+                "mx":"Mexico",
+                "gl":"Greenland",
+                "us":"United States of America",
+                "bb":"Barbados",
+                "tt":"Trinidad and Tobago",
+                "do":"Dominican Republic",
+                "ht":"Haiti",
+                "cu":"Cuba",
+                "bs":"Bahamas",
+                "jm":"Jamaica",
+                "ca":"Canada",
+                "gt":"Guatemala",
+                "hn":"Honduras",
+                "sv":"El Salvador",
+                "ni":"Nicaragua",
+                "cr":"Costa Rica",
+                "pa":"Panama",
+                "bz":"Belize"
+            }
+            prefix = "js/imgs/world/"
+            mapType = "north-america_en";
+        </script>
+        <script type="text/javascript" src="js/flags.js"></script>
+    </head>
+    <body>
+        <div id="world">
+            <div id="vmap">
+            </div>
+        </div>
+                 
+        <div id="textregion">
+            <span id="time"></span>
+            <img id="flag" src="">
+            <span id="attempts"></span>
+        </div>
+    </body>
+</html>
