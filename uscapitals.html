@@ -12,15 +12,76 @@
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="dist/jquery.vmap.js"></script>
     <script type="text/javascript" src="dist/maps/jquery.vmap.usa.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/uscapitals.js"></script>
+    <script>
+        regions = {
+            "wa":"Olympia",
+            "or":"Salem",
+            "ca":"Sacramento",
+            "ak":"Juneau",
+            "id":"Boise",
+            "mt":"Helena",
+            "nv":"Carson City",
+            "wy":"Cheyenne",
+            "co":"Denver",
+            "nm":"Santa Fe",
+            "az":"Phoenix",
+            "ut":"Salt Lake City",
+            "tx":"Austin",
+            "ok":"Oklahoma City",
+            "ks":"Topeka",
+            "ne":"Lincoln",
+            "sd":"Pierre",
+            "nd":"Bismark",
+            "wi":"Madison",
+            "mn":"Saint Paul",
+            "ia":"Des Moines",
+            "mo":"Jefferson City",
+            "ar":"Little Rock",
+            "la":"Baton Rouge",
+            "mi":"Lansing",
+            "il":"Springfield",
+            "tn":"Nashville",
+            "ms":"Jackson",
+            "al":"Montgomery",
+            "ga":"Georgia",
+            "ky":"Frankfort",
+            "in":"Indianapolis",
+            "oh":"Columbus",
+            "fl":"Tallahassee",
+            "sc":"Columbia",
+            "nc":"Raleigh",
+            "va":"Richmond",
+            "wv":"Charleston",
+            "dc":"Washington",
+            "md":"Annapolis",
+            "de":"Dover",
+            "pa":"Harrisburg",
+            "nj":"Trenton",
+            "ny":"Albany",
+            "ct":"Hartford",
+            "ri":"Providence",
+            "ma":"Boston",
+            "vt":"Montpelier",
+            "nh":"Concord",
+            "me":"Augusta",
+            "hi":"Honolulu"
+        }
+        mapType = "usa_en";
+    </script>
+    <script type="text/javascript" src="js/map.js"></script>
   </head>
   <body>
     <div id="world">
         <div id="vmap"></div>
     </div>
-    <div id="textregion">
-        
-    </div>
+    <div id="info">
+            <div id="time">
+            </div>
+            <div id="textregion">
+            </div>
+            <div id="attempts">
+            </div>
+        </div>
     
     
   </body>
